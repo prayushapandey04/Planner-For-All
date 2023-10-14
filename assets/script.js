@@ -45,3 +45,15 @@ function getEvents() {
 
 var currentDate = dayjs().format('dddd, MMMM D, YYYY');
 document.getElementById('currentDay').textContent = currentDate;
+
+// Calling the functions
+
+blockColor();
+getEvents();
+
+// Adding Event Listener for each time user presses each save button
+
+for (var i = 0; i < saveBttn.length; i++) {
+  saveBttn[i].addEventListener('click', saveUserInput);
+}
+
