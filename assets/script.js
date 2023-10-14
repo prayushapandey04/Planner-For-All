@@ -20,11 +20,15 @@ $(document).ready(function () {
     showMessage('Event added to local storage');
   }
 
-  function showMessage(message, containerId) {
+  function showMessage(message) {
     var message = document.createElement('div');
     message.textContent = message;
-    var messageContainer = document.getElementById(containerId);
+    var messageContainer = document.getElementById('message-container');
     messageContainer.appendChild(message);
+    
+    setTimeout(function () {
+      message.remove();
+    }, 3000);
   }
 // Color of block based on past, present, future
 
