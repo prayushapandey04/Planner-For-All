@@ -53,6 +53,10 @@
     color: white;
   }
   
+  .message-container {
+    position: fixed;
+  }
+
   .saveBtn i:hover {
     font-size: 20px;
     transition: all 0.3s ease-in-out;
