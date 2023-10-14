@@ -1,6 +1,5 @@
 // Starting by grabbing elements with variable
 
-var currentDate = $('#currentDay');
 var timeBlock = $('.time-block');
 var saveBttn = $('.saveBtn');
 var currentHour = dayjs().format('H');
@@ -41,3 +40,8 @@ function getEvents() {
     }
   }
 }
+
+// Setting current date with dayjs
+
+var currentDate = dayjs().format('dddd, MMMM D, YYYY');
+document.getElementById('currentDay').textContent = currentDate;
