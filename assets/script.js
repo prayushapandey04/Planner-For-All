@@ -16,8 +16,16 @@ $(document).ready(function () {
     var idTimeBlock = parent.Element.id
     var userInput = parentElement.querySelector('textarea').value;
     localStorage.setItem(idTimeBlock, userInput);
+    // To show that event is added to local storage
+    showMessage('Event added to local storage');
   }
 
+  function showMessage(message, containerId) {
+    var message = document.createElement('div');
+    message.textContent = message;
+    var messageContainer = document.getElementById(containerId);
+    messageContainer.appendChild(message);
+  }
 // Color of block based on past, present, future
 
   function blockColor() {
@@ -37,7 +45,7 @@ $(document).ready(function () {
 
   function getEvents() {
     for (var i = 0; i < timeBlock.length; i++) {
-      var idTimeBlock = $(timeBlock[i]).setAttribute('id');
+      var idTimeBlock = $(timeBlock[i]).attr('id');
       var userInput = localStorage.getItem(idTimeBlock);
       if (userInput !== null) {
         timeBlock[i].querySelector('textarea').value = userInput;
@@ -58,7 +66,7 @@ $(document).ready(function () {
 // Adding Event Listener for each time user presses each save button
 
   for (var i = 0; i < saveBttn.length; i++) {
-    saveBttn[i].addEventListener('click', saveUserInput);
+    saveBttn[i].addEventListener('click', savePlan);
   }
 });
 
