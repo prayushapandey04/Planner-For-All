@@ -15,19 +15,20 @@ function savePlan(event) {
   localStorage.setItem(idTimeBlock, userInput);
 }
 
+// Color of block based on past, present, future
 
-    // TODO: Add a listener for click events on the save button. This code should
-    // use the id in the containing time-block as a key to save the user input in
-    // local storage. HINT: What does `this` reference in the click listener
-    // function? How can DOM traversal be used to get the "hour-x" id of the
-    // time-block containing the button that was clicked? How might the id be
-    // useful when saving the description in local storage?
-
-    $(function () {
-      saveBttn.on('click', function () {
-    
-        localStorage.getItem(userInput)
-      });
+function blockColor () {
+  for (var i = 0; i < timeBlock.length; i++) {
+    var idTimeBlock = $(timeBlock[i]).data('hour');
+    if (currentHour < idTimeBlock) {
+      $(this).removeClass('past present').addClass('future');
+    } else if (currentHour == idTimeBlock) {
+      $(this).removeClass('past future').addClass('present');
+    } else {
+      $(this).removeClass('present future').addClass('past');
+    }
+  }
+}
   
 
     //
