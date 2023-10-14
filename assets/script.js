@@ -37,7 +37,7 @@ $(document).ready(function () {
 
   function getEvents() {
     for (var i = 0; i < timeBlock.length; i++) {
-      var idTimeBlock = $(timeBlock[i]).id;
+      var idTimeBlock = $(timeBlock[i]).setAttribute('id');
       var userInput = localStorage.getItem(idTimeBlock);
       if (userInput !== null) {
         timeBlock[i].querySelector('textarea').value = userInput;
