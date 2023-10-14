@@ -13,7 +13,7 @@ $(document).ready(function () {
 
   function savePlan(event) {
     var parentElement = event.target.closest('.time-block');
-    var idTimeBlock = parent.Element.$('id');
+    var idTimeBlock = parent.Element.id
     var userInput = parentElement.querySelector('textarea').value;
     localStorage.setItem(idTimeBlock, userInput);
   }
@@ -24,11 +24,11 @@ $(document).ready(function () {
     for (var i = 0; i < timeBlock.length; i++) {
       var idTimeBlock = $(timeBlock[i]).data('hour');
       if (currentHour < idTimeBlock) {
-        $(this).removeClass('past present').addClass('future');
+        $(timeBlock[i]).removeClass('past present').addClass('future');
       } else if (currentHour == idTimeBlock) {
-        $(this).removeClass('past future').addClass('present');
+        $(timeBlock[i]).removeClass('past future').addClass('present');
       } else {
-        $(this).removeClass('present future').addClass('past');
+        $(timeBlock[i]).removeClass('present future').addClass('past');
       }
     }
   }
