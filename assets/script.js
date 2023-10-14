@@ -1,21 +1,20 @@
+// Starting by grabbing elements with variable
+
 var currentDate = $('#currentDay');
-var timeBlock = $('#time-block');
-var saveBttn = $('#saveBtn');
-var currentHour = dayjs().format('HH');
+var timeBlock = $('.time-block');
+var saveBttn = $('.saveBtn');
+var currentHour = dayjs().format('H');
 
 
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
-
+// Saving what the user inputs into local storage
 
 function savePlan(event) {
-  event.preventDefault();
-  var parentElement = $(event.target).parent()[0].id
-  var parentElementId = $(event.target).parent()
-  var userInput = parentElement.children('textarea').value();
-  localStorage.setItem(parentElementId, userInput);
+  var parentElement = event.target.closest('.time-block');
+  var idTimeBlock = parent.Element.$('id');
+  var userInput = parentElement.querySelector('textarea').value;
+  localStorage.setItem(idTimeBlock, userInput);
 }
+
 
     // TODO: Add a listener for click events on the save button. This code should
     // use the id in the containing time-block as a key to save the user input in
