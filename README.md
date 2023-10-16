@@ -4,7 +4,7 @@ A website which allows a user to create a day planner!
 
 ## Description
 
-This is a planner website which creates a planner for the user based on if the time has passed already or not! This assignment was given to me with the created HTML and CSS, however I had to add all the code in the JavaScript to add functionality and udpated the website dynamically. By creating the HTML and CSS, the website has been styled and content has been added on there. This planner shows the current date and is color coded based on past, present, and future events. (Past is in grey, present is in red and future is in green). This website also utilizes local storage to save user's input.
+This is a planner website which allows the user to create their own planner (for business hours) and has been dynamically created through JavaScript for functionality.This assignment was given to me with the created HTML and CSS, however I had to add all the code in the JavaScript to add functionality and udpated the website dynamically. By creating the HTML and CSS, the website has been styled and content has been added on there. This planner shows the current date and is color coded based on past, present, and future events. (Past is in grey, present is in red and future is in green). This website also utilizes local storage to save user's input.
 
 ## Usage
 
