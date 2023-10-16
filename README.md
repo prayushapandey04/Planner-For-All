@@ -20,4 +20,4 @@ Please click the link for my deployed live website [here.](https://prayushapande
 
 ## License
 
-Please refer to the license in my repo (MIT).
+Please refer to the license in my repo (MIT License).
